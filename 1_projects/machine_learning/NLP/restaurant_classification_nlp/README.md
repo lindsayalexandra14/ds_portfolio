@@ -1,4 +1,4 @@
-# restaurant_prediction_nlp
+# restaurant_classification_nlp
 
 **Author:** Lindsay McFarlane
 
