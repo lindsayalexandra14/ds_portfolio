@@ -4,8 +4,8 @@ Welcome to my portfolio 💼✨ I'm Lindsay McFarlane and this repository showca
 
 I'm a data scientist, passionate about delivering meaningful, accurate, and simplified insights from data.
 
-🔧 Languages: Python, R, SQL
-🌴 Location: California, USA
-🖥️ Website: www.lindsaymsba.com
+- 🔧 Languages: Python, R, SQL
+- 🌴 Location: California, USA
+- 🖥️ Website: www.lindsaymsba.com
 
 
