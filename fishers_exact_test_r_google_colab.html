@@ -7563,9 +7563,9 @@ a.anchor-link {
 <ul>
 <li>It was established from the test that the treatment performed better with significance (at alpha=0.05). The practical significance is low (cohen's h = 0.02). It did not have the full desired statistical power (75% vs. 80%)</li>
 </ul>
-<p><strong>action</strong></p>
+<p><strong>recommendation</strong></p>
 <ul>
-<li>In this case, given the constraints, I am comfortable enough with the treatment performing some level higher than the control with significance and not vice versa that I will recommend moving forward with implementing the treatment</li>
+<li>In this case, given the constraints, I am comfortable enough with the treatment performing some level higher than the control with significance and not vice versa that I recommend moving forward with implementing the treatment</li>
 </ul>
 <p><strong>tl;dr for full results</strong></p>
 <ul>
@@ -7604,8 +7604,8 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="s2">"exact2x2"</span><span class="p">)</span>
-<span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="s2">"statmod"</span><span class="p">)</span>
+<div class="highlight hl-R"><pre><span></span><span class="nf">install.packages</span><span class="p">(</span><span class="s">"exact2x2"</span><span class="p">)</span>
+<span class="nf">install.packages</span><span class="p">(</span><span class="s">"statmod"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7616,12 +7616,12 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [42]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">exact2x2</span><span class="p">)</span>
-<span class="n">library</span><span class="p">(</span><span class="n">statmod</span><span class="p">)</span>
-<span class="n">library</span><span class="p">(</span><span class="n">glue</span><span class="p">)</span>
+<div class="highlight hl-R"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">exact2x2</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">statmod</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">glue</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7643,20 +7643,20 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [43]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">alpha</span> <span class="o">&lt;-</span> <span class="mf">0.05</span>            <span class="c1"># Significance level</span>
-<span class="n">power</span> <span class="o">&lt;-</span> <span class="mf">0.80</span>            <span class="c1"># Statistical power (Probability of detecting an effect when it exists; 0.8 is standard)</span>
-<span class="n">control</span><span class="o">=</span><span class="mf">0.14</span>             <span class="c1"># Baseline rate</span>
-<span class="n">effect</span> <span class="o">&lt;-</span> <span class="mf">0.05</span>           <span class="c1"># Desired relative effect (e.g., 5% lift over baseline)</span>
-<span class="n">mde</span> <span class="o">&lt;-</span> <span class="n">control</span> <span class="o">*</span> <span class="n">effect</span>   <span class="c1"># Minimum Detectable Effect (MDE)</span>
-  <span class="c1"># Minimum difference you want to detect in absolute terms</span>
-  <span class="c1"># It is the absolute difference between the proportions</span>
-  <span class="c1"># e.g., 5% of a 16% baseline = 0.008. Or want 23% to go to 24% = 1% MDE</span>
-<span class="n">treatment</span><span class="o">=</span> <span class="n">control</span> <span class="o">+</span> <span class="n">mde</span>  <span class="c1">#Treatment rate (includes effect)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">paste</span><span class="p">(</span><span class="s1">'Control:'</span><span class="p">,</span><span class="n">control</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">paste</span><span class="p">(</span><span class="s1">'Treatment:'</span><span class="p">,</span><span class="n">treatment</span><span class="p">))</span>
+<div class="highlight hl-R"><pre><span></span><span class="n">alpha</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">0.05</span><span class="w">            </span><span class="c1"># Significance level</span>
+<span class="n">power</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">0.80</span><span class="w">            </span><span class="c1"># Statistical power (Probability of detecting an effect when it exists; 0.8 is standard)</span>
+<span class="n">control</span><span class="o">=</span><span class="m">0.14</span><span class="w">             </span><span class="c1"># Baseline rate</span>
+<span class="n">effect</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">0.05</span><span class="w">           </span><span class="c1"># Desired relative effect (e.g., 5% lift over baseline)</span>
+<span class="n">mde</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">control</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">effect</span><span class="w">   </span><span class="c1"># Minimum Detectable Effect (MDE)</span>
+<span class="w">  </span><span class="c1"># Minimum difference you want to detect in absolute terms</span>
+<span class="w">  </span><span class="c1"># It is the absolute difference between the proportions</span>
+<span class="w">  </span><span class="c1"># e.g., 5% of a 16% baseline = 0.008. Or want 23% to go to 24% = 1% MDE</span>
+<span class="n">treatment</span><span class="o">=</span><span class="w"> </span><span class="n">control</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">mde</span><span class="w">  </span><span class="c1">#Treatment rate (includes effect)</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">paste</span><span class="p">(</span><span class="s">'Control:'</span><span class="p">,</span><span class="n">control</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">paste</span><span class="p">(</span><span class="s">'Treatment:'</span><span class="p">,</span><span class="n">treatment</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -7681,26 +7681,26 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [44]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">p_1</span><span class="o">=</span><span class="n">treatment</span>
+<div class="highlight hl-R"><pre><span></span><span class="n">p_1</span><span class="o">=</span><span class="n">treatment</span>
 <span class="n">p_2</span><span class="o">=</span><span class="n">control</span>
-<span class="n">p1_label</span> <span class="o">=</span> <span class="s2">"Treatment"</span>
-<span class="n">p2_label</span> <span class="o">=</span> <span class="s2">"Control"</span>
+<span class="n">p1_label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Treatment"</span>
+<span class="n">p2_label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Control"</span>
 
-<span class="n">alternative</span> <span class="o">=</span> <span class="s2">"greater"</span> <span class="c1"># in reference to p1:</span>
+<span class="n">alternative</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"greater"</span><span class="w"> </span><span class="c1"># in reference to p1:</span>
 <span class="c1"># p1 is "greater" than p2</span>
 <span class="c1"># p1 is "less" than p2</span>
 <span class="c1"># p1 is different from ()"two.sided" p2</span>
 
-<span class="n">hypothesis</span> <span class="o">&lt;-</span> <span class="n">switch</span><span class="p">(</span><span class="n">alternative</span><span class="p">,</span>
-  <span class="n">greater</span> <span class="o">=</span> <span class="n">sprintf</span><span class="p">(</span><span class="s2">"</span><span class="si">%s</span><span class="s2"> (</span><span class="si">%.4f</span><span class="s2">) is greater than </span><span class="si">%s</span><span class="s2"> (</span><span class="si">%.4f</span><span class="s2">)"</span><span class="p">,</span> <span class="n">p1_label</span><span class="p">,</span> <span class="n">p_1</span><span class="p">,</span> <span class="n">p2_label</span><span class="p">,</span> <span class="n">p_2</span><span class="p">),</span>
-  <span class="n">less</span> <span class="o">=</span> <span class="n">sprintf</span><span class="p">(</span><span class="s2">"</span><span class="si">%s</span><span class="s2"> (</span><span class="si">%.4f</span><span class="s2">) is less than </span><span class="si">%s</span><span class="s2"> (</span><span class="si">%.4f</span><span class="s2">)"</span><span class="p">,</span> <span class="n">p1_label</span><span class="p">,</span> <span class="n">p_1</span><span class="p">,</span> <span class="n">p2_label</span><span class="p">,</span> <span class="n">p_2</span><span class="p">),</span>
-  <span class="n">two</span><span class="o">.</span><span class="n">sided</span> <span class="o">=</span> <span class="n">sprintf</span><span class="p">(</span><span class="s2">"</span><span class="si">%s</span><span class="s2"> (</span><span class="si">%.4f</span><span class="s2">) is different from </span><span class="si">%s</span><span class="s2"> (</span><span class="si">%.4f</span><span class="s2">)"</span><span class="p">,</span> <span class="n">p1_label</span><span class="p">,</span> <span class="n">p_1</span><span class="p">,</span> <span class="n">p2_label</span><span class="p">,</span> <span class="n">p_2</span><span class="p">),</span>
+<span class="n">hypothesis</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">switch</span><span class="p">(</span><span class="n">alternative</span><span class="p">,</span>
+<span class="w">  </span><span class="n">greater</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sprintf</span><span class="p">(</span><span class="s">"%s (%.4f) is greater than %s (%.4f)"</span><span class="p">,</span><span class="w"> </span><span class="n">p1_label</span><span class="p">,</span><span class="w"> </span><span class="n">p_1</span><span class="p">,</span><span class="w"> </span><span class="n">p2_label</span><span class="p">,</span><span class="w"> </span><span class="n">p_2</span><span class="p">),</span>
+<span class="w">  </span><span class="n">less</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sprintf</span><span class="p">(</span><span class="s">"%s (%.4f) is less than %s (%.4f)"</span><span class="p">,</span><span class="w"> </span><span class="n">p1_label</span><span class="p">,</span><span class="w"> </span><span class="n">p_1</span><span class="p">,</span><span class="w"> </span><span class="n">p2_label</span><span class="p">,</span><span class="w"> </span><span class="n">p_2</span><span class="p">),</span>
+<span class="w">  </span><span class="n">two.sided</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sprintf</span><span class="p">(</span><span class="s">"%s (%.4f) is different from %s (%.4f)"</span><span class="p">,</span><span class="w"> </span><span class="n">p1_label</span><span class="p">,</span><span class="w"> </span><span class="n">p_1</span><span class="p">,</span><span class="w"> </span><span class="n">p2_label</span><span class="p">,</span><span class="w"> </span><span class="n">p_2</span><span class="p">),</span>
 <span class="p">)</span>
 
-<span class="n">cat</span><span class="p">(</span><span class="s2">"Hypothesis:"</span><span class="p">,</span><span class="n">hypothesis</span><span class="p">)</span>
+<span class="nf">cat</span><span class="p">(</span><span class="s">"Hypothesis:"</span><span class="p">,</span><span class="n">hypothesis</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7734,19 +7734,19 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [45]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Cohen's h (standardized effect size for proportions)</span>
-<span class="n">proportion_effectsize</span> <span class="o">&lt;-</span> <span class="n">function</span><span class="p">(</span><span class="n">treatment</span><span class="p">,</span> <span class="n">control</span><span class="p">)</span> <span class="p">{</span>
-  <span class="mi">2</span> <span class="o">*</span> <span class="n">asin</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="n">treatment</span><span class="p">))</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">asin</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="n">control</span><span class="p">))</span>
+<div class="highlight hl-R"><pre><span></span><span class="c1"># Cohen's h (standardized effect size for proportions)</span>
+<span class="n">proportion_effectsize</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">treatment</span><span class="p">,</span><span class="w"> </span><span class="n">control</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="m">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nf">asin</span><span class="p">(</span><span class="nf">sqrt</span><span class="p">(</span><span class="n">treatment</span><span class="p">))</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nf">asin</span><span class="p">(</span><span class="nf">sqrt</span><span class="p">(</span><span class="n">control</span><span class="p">))</span>
 <span class="p">}</span>
-<span class="n">effect_size</span> <span class="o">&lt;-</span> <span class="n">proportion_effectsize</span><span class="p">(</span><span class="n">treatment</span><span class="p">,</span> <span class="n">control</span><span class="p">)</span>
+<span class="n">effect_size</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">proportion_effectsize</span><span class="p">(</span><span class="n">treatment</span><span class="p">,</span><span class="w"> </span><span class="n">control</span><span class="p">)</span>
 
 <span class="c1"># cat(sprintf("Control = %.4f\n", control))</span>
 <span class="c1"># cat(sprintf("Treatment= %.4f\n", treatment))</span>
-<span class="n">cat</span><span class="p">(</span><span class="n">sprintf</span><span class="p">(</span><span class="s2">"Minimum Detectable Effect (MDE): </span><span class="si">%.3f</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">mde</span><span class="p">))</span>
-<span class="n">cat</span><span class="p">(</span><span class="n">sprintf</span><span class="p">(</span><span class="s2">"Effect Size (Cohen's h): </span><span class="si">%.3f</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">effect_size</span><span class="p">))</span>
+<span class="nf">cat</span><span class="p">(</span><span class="nf">sprintf</span><span class="p">(</span><span class="s">"Minimum Detectable Effect (MDE): %.3f\n"</span><span class="p">,</span><span class="w"> </span><span class="n">mde</span><span class="p">))</span>
+<span class="nf">cat</span><span class="p">(</span><span class="nf">sprintf</span><span class="p">(</span><span class="s">"Effect Size (Cohen's h): %.3f\n"</span><span class="p">,</span><span class="w"> </span><span class="n">effect_size</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -7811,22 +7811,22 @@ Effect Size (Cohen's h): 0.020
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [46]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">simulate_fisher_power</span> <span class="o">&lt;-</span> <span class="n">function</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">reps</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span> <span class="n">alternative</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nb">set</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
-  <span class="n">rejects</span> <span class="o">&lt;-</span> <span class="n">replicate</span><span class="p">(</span><span class="n">reps</span><span class="p">,</span> <span class="p">{</span>
-    <span class="n">x1</span> <span class="o">&lt;-</span> <span class="n">rbinom</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n1</span><span class="p">,</span> <span class="n">p1</span><span class="p">)</span>
-    <span class="n">x2</span> <span class="o">&lt;-</span> <span class="n">rbinom</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">p2</span><span class="p">)</span>
+<div class="highlight hl-R"><pre><span></span><span class="n">simulate_fisher_power</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span><span class="w"> </span><span class="n">p2</span><span class="p">,</span><span class="w"> </span><span class="n">n1</span><span class="p">,</span><span class="w"> </span><span class="n">n2</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="p">,</span><span class="w"> </span><span class="n">reps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1000</span><span class="p">,</span><span class="w"> </span><span class="n">alternative</span><span class="p">,</span><span class="w"> </span><span class="n">seed</span><span class="o">=</span><span class="m">100</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">set.seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
+<span class="w">  </span><span class="n">rejects</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">replicate</span><span class="p">(</span><span class="n">reps</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">x1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">rbinom</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">n1</span><span class="p">,</span><span class="w"> </span><span class="n">p1</span><span class="p">)</span>
+<span class="w">    </span><span class="n">x2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">rbinom</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">n2</span><span class="p">,</span><span class="w"> </span><span class="n">p2</span><span class="p">)</span>
 
-    <span class="c1"># Creates contingency table, x1 is reference for hypothesis</span>
-    <span class="n">tbl</span> <span class="o">&lt;-</span> <span class="n">matrix</span><span class="p">(</span><span class="n">c</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">n1</span> <span class="o">-</span> <span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">n2</span> <span class="o">-</span> <span class="n">x2</span><span class="p">),</span> <span class="n">nrow</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">byrow</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">)</span>
+<span class="w">    </span><span class="c1"># Creates contingency table, x1 is reference for hypothesis</span>
+<span class="w">    </span><span class="n">tbl</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">matrix</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="n">n1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="n">x2</span><span class="p">,</span><span class="w"> </span><span class="n">n2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x2</span><span class="p">),</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">byrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span>
 
-    <span class="n">fisher</span><span class="o">.</span><span class="n">test</span><span class="p">(</span><span class="n">tbl</span><span class="p">,</span> <span class="n">alternative</span> <span class="o">=</span> <span class="n">alternative</span><span class="p">)</span><span class="err">$</span><span class="n">p</span><span class="o">.</span><span class="n">value</span> <span class="o">&lt;</span> <span class="n">alpha</span>
-  <span class="p">})</span>
+<span class="w">    </span><span class="nf">fisher.test</span><span class="p">(</span><span class="n">tbl</span><span class="p">,</span><span class="w"> </span><span class="n">alternative</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">alternative</span><span class="p">)</span><span class="o">$</span><span class="n">p.value</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">alpha</span>
+<span class="w">  </span><span class="p">})</span>
 
-  <span class="n">mean</span><span class="p">(</span><span class="n">rejects</span><span class="p">)</span>
+<span class="w">  </span><span class="nf">mean</span><span class="p">(</span><span class="n">rejects</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -7849,15 +7849,15 @@ Effect Size (Cohen's h): 0.020
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [47]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">n_1</span> <span class="o">&lt;-</span> <span class="mi">30000</span>   <span class="c1"># input sample size for group 1</span>
-<span class="n">n_2</span> <span class="o">&lt;-</span> <span class="mi">30000</span>   <span class="c1"># input sample size for group 2</span>
+<div class="highlight hl-R"><pre><span></span><span class="n">n_1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">30000</span><span class="w">   </span><span class="c1"># input sample size for group 1</span>
+<span class="n">n_2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">30000</span><span class="w">   </span><span class="c1"># input sample size for group 2</span>
 
 <span class="c1"># Estimate Power at a Fixed Sample Size:</span>
-<span class="n">estimated_power</span> <span class="o">&lt;-</span> <span class="n">simulate_fisher_power</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="n">p_1</span><span class="p">,</span> <span class="n">p2</span><span class="o">=</span><span class="n">p_2</span><span class="p">,</span> <span class="n">n_1</span><span class="p">,</span> <span class="n">n_2</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">,</span> <span class="n">alternative</span> <span class="o">=</span> <span class="n">alternative</span><span class="p">)</span>
-<span class="n">cat</span><span class="p">(</span><span class="n">sprintf</span><span class="p">(</span><span class="s2">"Power for manual estimate: </span><span class="si">%.3f</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">estimated_power</span><span class="p">))</span>
+<span class="n">estimated_power</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">simulate_fisher_power</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="n">p_1</span><span class="p">,</span><span class="w"> </span><span class="n">p2</span><span class="o">=</span><span class="n">p_2</span><span class="p">,</span><span class="w"> </span><span class="n">n_1</span><span class="p">,</span><span class="w"> </span><span class="n">n_2</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">,</span><span class="w"> </span><span class="n">alternative</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">alternative</span><span class="p">)</span>
+<span class="nf">cat</span><span class="p">(</span><span class="nf">sprintf</span><span class="p">(</span><span class="s">"Power for manual estimate: %.3f\n"</span><span class="p">,</span><span class="w"> </span><span class="n">estimated_power</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -7892,13 +7892,13 @@ Effect Size (Cohen's h): 0.020
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [48]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">control_conversions</span><span class="o">=</span><span class="mi">7</span>
-<span class="n">treatment_conversions</span><span class="o">=</span><span class="mi">18</span>
-<span class="n">control_no_conversions</span><span class="o">=</span><span class="mi">150</span>
-<span class="n">treatment_no_conversions</span><span class="o">=</span><span class="mi">130</span>
+<div class="highlight hl-R"><pre><span></span><span class="n">control_conversions</span><span class="o">=</span><span class="m">7</span>
+<span class="n">treatment_conversions</span><span class="o">=</span><span class="m">18</span>
+<span class="n">control_no_conversions</span><span class="o">=</span><span class="m">150</span>
+<span class="n">treatment_no_conversions</span><span class="o">=</span><span class="m">130</span>
 </pre></div>
 </div>
 </div>
@@ -7909,11 +7909,11 @@ Effect Size (Cohen's h): 0.020
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [49]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">p1_label</span><span class="p">)</span> <span class="c1"># set above in test design</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">p2_label</span><span class="p">)</span>
+<div class="highlight hl-R"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="n">p1_label</span><span class="p">)</span><span class="w"> </span><span class="c1"># set above in test design</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">p2_label</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7940,6 +7940,17 @@ Effect Size (Cohen's h): 0.020
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Contingency-Table">Contingency Table<a class="anchor-link" href="#Contingency-Table">¶</a></h2>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p><img alt="Alt text" src="https://github.com/lindsayalexandra14/ds_portfolio/raw/main/2_images/templates/notebook/headers/lilac/Contingency%20Table.png"/></p>
 </div>
 </div>
@@ -7949,13 +7960,13 @@ Effect Size (Cohen's h): 0.020
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [50]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">table</span> <span class="o">&lt;-</span> <span class="n">matrix</span><span class="p">(</span><span class="n">c</span><span class="p">(</span><span class="n">control_conversions</span><span class="p">,</span> <span class="n">control_no_conversions</span><span class="p">,</span> <span class="n">treatment_conversions</span><span class="p">,</span> <span class="n">treatment_no_conversions</span><span class="p">),</span> <span class="n">nrow</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">byrow</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">)</span>
-<span class="n">colnames</span><span class="p">(</span><span class="n">table</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="n">c</span><span class="p">(</span><span class="s2">"Converted"</span><span class="p">,</span> <span class="s2">"Not_Converted"</span><span class="p">)</span>
-<span class="n">rownames</span><span class="p">(</span><span class="n">table</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="n">c</span><span class="p">(</span><span class="s2">"Control"</span><span class="p">,</span> <span class="s2">"Treatment"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
+<div class="highlight hl-R"><pre><span></span><span class="n">table</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">matrix</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="n">control_conversions</span><span class="p">,</span><span class="w"> </span><span class="n">control_no_conversions</span><span class="p">,</span><span class="w"> </span><span class="n">treatment_conversions</span><span class="p">,</span><span class="w"> </span><span class="n">treatment_no_conversions</span><span class="p">),</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">byrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span>
+<span class="nf">colnames</span><span class="p">(</span><span class="n">table</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"Converted"</span><span class="p">,</span><span class="w"> </span><span class="s">"Not_Converted"</span><span class="p">)</span>
+<span class="nf">rownames</span><span class="p">(</span><span class="n">table</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"Control"</span><span class="p">,</span><span class="w"> </span><span class="s">"Treatment"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7981,15 +7992,15 @@ Treatment        18           130
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [51]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Flip rows if p1_label is not in the first row</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">rownames</span><span class="p">(</span><span class="n">table</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="n">p1_label</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">table_to_use</span> <span class="o">&lt;-</span> <span class="n">table</span><span class="p">[</span><span class="n">c</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">]</span>
+<div class="highlight hl-R"><pre><span></span><span class="c1"># Flip rows if p1_label is not in the first row</span>
+<span class="nf">if </span><span class="p">(</span><span class="nf">rownames</span><span class="p">(</span><span class="n">table</span><span class="p">)[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">p1_label</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">table_to_use</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">table</span><span class="p">[</span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">),</span><span class="w"> </span><span class="p">]</span>
 <span class="p">}</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">table_to_use</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">table_to_use</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8026,19 +8037,19 @@ Control           7           150
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [52]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">n1</span> <span class="o">&lt;-</span> <span class="nb">sum</span><span class="p">(</span><span class="n">table_to_use</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">])</span>           <span class="c1"># Reference group (row 1)</span>
-<span class="n">n2</span> <span class="o">&lt;-</span> <span class="nb">sum</span><span class="p">(</span><span class="n">table_to_use</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="p">])</span>           <span class="c1"># (row 2)</span>
+<div class="highlight hl-R"><pre><span></span><span class="n">n1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="n">table_to_use</span><span class="p">[</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="p">])</span><span class="w">           </span><span class="c1"># Reference group (row 1)</span>
+<span class="n">n2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="n">table_to_use</span><span class="p">[</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="p">])</span><span class="w">           </span><span class="c1"># (row 2)</span>
 
-<span class="n">p1</span> <span class="o">&lt;-</span> <span class="n">table_to_use</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s2">"Converted"</span><span class="p">]</span> <span class="o">/</span> <span class="n">n1</span>   <span class="c1"># Reference group (row 1) conversion rate</span>
-<span class="n">p2</span> <span class="o">&lt;-</span> <span class="n">table_to_use</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="s2">"Converted"</span><span class="p">]</span> <span class="o">/</span> <span class="n">n2</span>   <span class="c1"># (row 2) conversion rate</span>
+<span class="n">p1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">table_to_use</span><span class="p">[</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="s">"Converted"</span><span class="p">]</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">n1</span><span class="w">   </span><span class="c1"># Reference group (row 1) conversion rate</span>
+<span class="n">p2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">table_to_use</span><span class="p">[</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="s">"Converted"</span><span class="p">]</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">n2</span><span class="w">   </span><span class="c1"># (row 2) conversion rate</span>
 
-<span class="n">groups</span> <span class="o">&lt;-</span> <span class="n">c</span><span class="p">(</span><span class="n">p1</span> <span class="o">=</span> <span class="n">p1_label</span><span class="p">,</span> <span class="n">p2</span> <span class="o">=</span> <span class="n">p2_label</span><span class="p">)</span>
+<span class="n">groups</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">p1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p1_label</span><span class="p">,</span><span class="w"> </span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p2_label</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">glue</span><span class="p">(</span><span class="s2">"p1: "</span><span class="p">,</span><span class="s2">"</span><span class="si">{groups['p1']}</span><span class="s2"> Conversion Rate: {round(p1 * 100, 2)}%"</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">glue</span><span class="p">(</span><span class="s2">"p2: "</span><span class="p">,</span><span class="s2">"</span><span class="si">{groups['p2']}</span><span class="s2"> Conversion Rate: {round(p2 * 100, 2)}%"</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">glue</span><span class="p">(</span><span class="s">"p1: "</span><span class="p">,</span><span class="s">"{groups['p1']} Conversion Rate: {round(p1 * 100, 2)}%"</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">glue</span><span class="p">(</span><span class="s">"p2: "</span><span class="p">,</span><span class="s">"{groups['p2']} Conversion Rate: {round(p2 * 100, 2)}%"</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -8063,16 +8074,16 @@ p2: Control Conversion Rate: 4.46%
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [53]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">result_hypothesis</span> <span class="o">&lt;-</span> <span class="n">switch</span><span class="p">(</span><span class="n">alternative</span><span class="p">,</span>
-  <span class="n">greater</span> <span class="o">=</span> <span class="n">sprintf</span><span class="p">(</span><span class="s2">"</span><span class="si">%s</span><span class="s2"> (</span><span class="si">%.4f</span><span class="s2">) is greater than </span><span class="si">%s</span><span class="s2"> (</span><span class="si">%.4f</span><span class="s2">)"</span><span class="p">,</span> <span class="n">p1_label</span><span class="p">,</span> <span class="n">p1</span><span class="p">,</span> <span class="n">p2_label</span><span class="p">,</span> <span class="n">p2</span><span class="p">),</span>
-  <span class="n">less</span> <span class="o">=</span> <span class="n">sprintf</span><span class="p">(</span><span class="s2">"</span><span class="si">%s</span><span class="s2"> (</span><span class="si">%.4f</span><span class="s2">) is less than </span><span class="si">%s</span><span class="s2"> (</span><span class="si">%.4f</span><span class="s2">)"</span><span class="p">,</span> <span class="n">p1_label</span><span class="p">,</span> <span class="n">p1</span><span class="p">,</span> <span class="n">p2_label</span><span class="p">,</span> <span class="n">p2</span><span class="p">),</span>
-  <span class="n">two</span><span class="o">.</span><span class="n">sided</span> <span class="o">=</span> <span class="n">sprintf</span><span class="p">(</span><span class="s2">"</span><span class="si">%s</span><span class="s2"> (</span><span class="si">%.4f</span><span class="s2">) is different from </span><span class="si">%s</span><span class="s2"> (</span><span class="si">%.4f</span><span class="s2">)"</span><span class="p">,</span> <span class="n">p1_label</span><span class="p">,</span> <span class="n">p1</span><span class="p">,</span> <span class="n">p2_label</span><span class="p">,</span> <span class="n">p2</span><span class="p">),</span>
+<div class="highlight hl-R"><pre><span></span><span class="n">result_hypothesis</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">switch</span><span class="p">(</span><span class="n">alternative</span><span class="p">,</span>
+<span class="w">  </span><span class="n">greater</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sprintf</span><span class="p">(</span><span class="s">"%s (%.4f) is greater than %s (%.4f)"</span><span class="p">,</span><span class="w"> </span><span class="n">p1_label</span><span class="p">,</span><span class="w"> </span><span class="n">p1</span><span class="p">,</span><span class="w"> </span><span class="n">p2_label</span><span class="p">,</span><span class="w"> </span><span class="n">p2</span><span class="p">),</span>
+<span class="w">  </span><span class="n">less</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sprintf</span><span class="p">(</span><span class="s">"%s (%.4f) is less than %s (%.4f)"</span><span class="p">,</span><span class="w"> </span><span class="n">p1_label</span><span class="p">,</span><span class="w"> </span><span class="n">p1</span><span class="p">,</span><span class="w"> </span><span class="n">p2_label</span><span class="p">,</span><span class="w"> </span><span class="n">p2</span><span class="p">),</span>
+<span class="w">  </span><span class="n">two.sided</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sprintf</span><span class="p">(</span><span class="s">"%s (%.4f) is different from %s (%.4f)"</span><span class="p">,</span><span class="w"> </span><span class="n">p1_label</span><span class="p">,</span><span class="w"> </span><span class="n">p1</span><span class="p">,</span><span class="w"> </span><span class="n">p2_label</span><span class="p">,</span><span class="w"> </span><span class="n">p2</span><span class="p">),</span>
 <span class="p">)</span>
 
-<span class="n">cat</span><span class="p">(</span><span class="s2">"Result Hypothesis:"</span><span class="p">,</span><span class="n">result_hypothesis</span><span class="p">)</span>
+<span class="nf">cat</span><span class="p">(</span><span class="s">"Result Hypothesis:"</span><span class="p">,</span><span class="n">result_hypothesis</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8106,30 +8117,30 @@ p2: Control Conversion Rate: 4.46%
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [54]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Absolute Difference</span>
-<span class="n">abs_diff</span> <span class="o">&lt;-</span> <span class="nb">abs</span><span class="p">(</span><span class="n">p1</span> <span class="o">-</span> <span class="n">p2</span><span class="p">)</span>
+<div class="highlight hl-R"><pre><span></span><span class="c1"># Absolute Difference</span>
+<span class="n">abs_diff</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">abs</span><span class="p">(</span><span class="n">p1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">p2</span><span class="p">)</span>
 
 <span class="c1"># Cohen's h function</span>
-<span class="n">proportion_effectsize</span> <span class="o">&lt;-</span> <span class="n">function</span><span class="p">(</span><span class="n">control</span><span class="p">,</span> <span class="n">treatment</span><span class="p">)</span> <span class="p">{</span>
-  <span class="mi">2</span> <span class="o">*</span> <span class="n">asin</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="n">treatment</span><span class="p">))</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">asin</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="n">control</span><span class="p">))</span>
+<span class="n">proportion_effectsize</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">control</span><span class="p">,</span><span class="w"> </span><span class="n">treatment</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="m">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nf">asin</span><span class="p">(</span><span class="nf">sqrt</span><span class="p">(</span><span class="n">treatment</span><span class="p">))</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nf">asin</span><span class="p">(</span><span class="nf">sqrt</span><span class="p">(</span><span class="n">control</span><span class="p">))</span>
 <span class="p">}</span>
 
-<span class="n">h</span> <span class="o">&lt;-</span> <span class="n">proportion_effectsize</span><span class="p">(</span><span class="n">control</span><span class="p">,</span> <span class="n">treatment</span><span class="p">)</span>
+<span class="n">h</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">proportion_effectsize</span><span class="p">(</span><span class="n">control</span><span class="p">,</span><span class="w"> </span><span class="n">treatment</span><span class="p">)</span>
 
-<span class="n">cat</span><span class="p">(</span><span class="n">sprintf</span><span class="p">(</span><span class="s2">"Absolute difference: </span><span class="si">%.3f</span><span class="s2"> (</span><span class="si">%.1f%%</span><span class="s2">)</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">abs_diff</span><span class="p">,</span> <span class="n">abs_diff</span> <span class="o">*</span> <span class="mi">100</span><span class="p">))</span>
-<span class="n">cat</span><span class="p">(</span><span class="n">sprintf</span><span class="p">(</span><span class="s2">"Cohen's h: </span><span class="si">%.3f</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">h</span><span class="p">))</span>
+<span class="nf">cat</span><span class="p">(</span><span class="nf">sprintf</span><span class="p">(</span><span class="s">"Absolute difference: %.3f (%.1f%%)\n"</span><span class="p">,</span><span class="w"> </span><span class="n">abs_diff</span><span class="p">,</span><span class="w"> </span><span class="n">abs_diff</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">100</span><span class="p">))</span>
+<span class="nf">cat</span><span class="p">(</span><span class="nf">sprintf</span><span class="p">(</span><span class="s">"Cohen's h: %.3f\n"</span><span class="p">,</span><span class="w"> </span><span class="n">h</span><span class="p">))</span>
 
 <span class="c1"># Interpret effect size</span>
-<span class="n">interpret_h</span> <span class="o">&lt;-</span> <span class="n">function</span><span class="p">(</span><span class="n">h</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">h</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">0.2</span><span class="p">)</span> <span class="k">return</span><span class="p">(</span><span class="s2">"negligible"</span><span class="p">)</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">h</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">0.5</span><span class="p">)</span> <span class="k">return</span><span class="p">(</span><span class="s2">"small"</span><span class="p">)</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">h</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">0.8</span><span class="p">)</span> <span class="k">return</span><span class="p">(</span><span class="s2">"medium"</span><span class="p">)</span>
-  <span class="k">return</span><span class="p">(</span><span class="s2">"large"</span><span class="p">)</span>
+<span class="n">interpret_h</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">if </span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0.2</span><span class="p">)</span><span class="w"> </span><span class="nf">return</span><span class="p">(</span><span class="s">"negligible"</span><span class="p">)</span>
+<span class="w">  </span><span class="nf">if </span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0.5</span><span class="p">)</span><span class="w"> </span><span class="nf">return</span><span class="p">(</span><span class="s">"small"</span><span class="p">)</span>
+<span class="w">  </span><span class="nf">if </span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0.8</span><span class="p">)</span><span class="w"> </span><span class="nf">return</span><span class="p">(</span><span class="s">"medium"</span><span class="p">)</span>
+<span class="w">  </span><span class="nf">return</span><span class="p">(</span><span class="s">"large"</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="n">cat</span><span class="p">(</span><span class="n">sprintf</span><span class="p">(</span><span class="s2">"Effect size interpretation: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">interpret_h</span><span class="p">(</span><span class="n">h</span><span class="p">)))</span>
+<span class="nf">cat</span><span class="p">(</span><span class="nf">sprintf</span><span class="p">(</span><span class="s">"Effect size interpretation: %s\n"</span><span class="p">,</span><span class="w"> </span><span class="nf">interpret_h</span><span class="p">(</span><span class="n">h</span><span class="p">)))</span>
 </pre></div>
 </div>
 </div>
@@ -8177,10 +8188,10 @@ Effect size interpretation: negligible
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [55]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">table_to_use</span><span class="p">)</span>
+<div class="highlight hl-R"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="n">table_to_use</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8217,12 +8228,11 @@ Control           7           150
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [56]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">exact2x2</span><span class="p">)</span>
-<span class="n">result</span> <span class="o">&lt;-</span>  <span class="n">exact2x2</span><span class="p">(</span><span class="n">table_to_use</span><span class="p">,</span> <span class="n">alternative</span> <span class="o">=</span> <span class="n">alternative</span><span class="p">,</span> <span class="n">conf</span><span class="o">.</span><span class="n">level</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">tsmethod</span><span class="o">=</span><span class="s2">"central"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<div class="highlight hl-R"><pre><span></span><span class="n">result</span><span class="w"> </span><span class="o">&lt;-</span><span class="w">  </span><span class="nf">exact2x2</span><span class="p">(</span><span class="n">table_to_use</span><span class="p">,</span><span class="w"> </span><span class="n">alternative</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">alternative</span><span class="p">,</span><span class="w"> </span><span class="n">conf.level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">alpha</span><span class="p">,</span><span class="w"> </span><span class="n">tsmethod</span><span class="o">=</span><span class="s">"central"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8268,12 +8278,12 @@ odds ratio
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [57]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">p_value</span> <span class="o">&lt;-</span> <span class="n">result</span><span class="err">$</span><span class="n">p</span><span class="o">.</span><span class="n">value</span>
+<div class="highlight hl-R"><pre><span></span><span class="n">p_value</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">result</span><span class="o">$</span><span class="n">p.value</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">paste</span><span class="p">(</span><span class="s2">"p-value: "</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">p_value</span><span class="p">,</span><span class="mi">3</span><span class="p">)))</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">paste</span><span class="p">(</span><span class="s">"p-value: "</span><span class="p">,</span><span class="nf">round</span><span class="p">(</span><span class="n">p_value</span><span class="p">,</span><span class="m">3</span><span class="p">)))</span>
 </pre></div>
 </div>
 </div>
@@ -8320,11 +8330,11 @@ statistically significant at the 95% confidence level.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [58]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">lower_ci</span> <span class="o">&lt;-</span> <span class="n">result</span><span class="err">$</span><span class="n">conf</span><span class="o">.</span><span class="n">int</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">lower_ci</span><span class="p">)</span>
+<div class="highlight hl-R"><pre><span></span><span class="n">lower_ci</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">result</span><span class="o">$</span><span class="n">conf.int</span><span class="p">[</span><span class="m">1</span><span class="p">]</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">lower_ci</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8351,7 +8361,7 @@ statistically significant at the 95% confidence level.</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>95% CI Lower Bound for Odds Ratio: 1.295.</p>
-<p>With 95% confidence, the treatment group (p₂) has higher odds of conversion than the control group (p₁).
+<p>With 95% confidence, the treatment group has higher odds of conversion than the control group.
 The odds of conversion in the treatment group are at least 29.5% higher than in the control group.
 This supports the hypothesis that treatment is better than control.</p>
 <p>Because the interval does not include 1, this result is statistically significant at the 95% confidence level.</p>
@@ -8369,20 +8379,34 @@ This supports the hypothesis that treatment is better than control.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [59]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="nb">set</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-<span class="n">result_power</span> <span class="o">&lt;-</span> <span class="n">power</span><span class="o">.</span><span class="n">fisher</span><span class="o">.</span><span class="n">test</span><span class="p">(</span><span class="n">n1</span> <span class="o">=</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span> <span class="o">=</span> <span class="n">n2</span><span class="p">,</span> <span class="n">p1</span> <span class="o">=</span> <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span> <span class="o">=</span> <span class="n">p2</span><span class="p">,</span>
-                           <span class="n">alpha</span> <span class="o">=</span> <span class="n">alpha</span><span class="p">,</span>
-                           <span class="n">alternative</span> <span class="o">=</span> <span class="n">alternative</span><span class="p">,</span>
-                           <span class="n">nsim</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">)</span>
+<div class="highlight hl-R"><pre><span></span><span class="nf">set.seed</span><span class="p">(</span><span class="m">100</span><span class="p">)</span>
+<span class="n">result_power</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">power.fisher.test</span><span class="p">(</span><span class="n">n1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n1</span><span class="p">,</span><span class="w"> </span><span class="n">n2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n2</span><span class="p">,</span><span class="w"> </span><span class="n">p1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p1</span><span class="p">,</span><span class="w"> </span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p2</span><span class="p">,</span>
+<span class="w">                           </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">alpha</span><span class="p">,</span>
+<span class="w">                           </span><span class="n">alternative</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">alternative</span><span class="p">,</span>
+<span class="w">                           </span><span class="n">nsim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10000</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">paste</span><span class="p">(</span><span class="s">"Result Power:"</span><span class="p">,</span><span class="nf">round</span><span class="p">(</span><span class="n">result_power</span><span class="o">*</span><span class="m">100</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="s">"%"</span><span class="p">))</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>[1] "Result Power: 75.3 %"
+</pre>
 </div>
 </div>
 </div>
@@ -8395,7 +8419,7 @@ This supports the hypothesis that treatment is better than control.</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>Result Power: 75.3 %</p>
-<p>Our test was underpowered (e.g., only ~75.3% power), meaning there was
+<p>Our test was underpowered (e.g., only ~75% power vs. 80% desired), meaning there was
 a higher chance we failed to detect a true difference due to limited sample size.
 As a result, while the effect appears meaningful, we cannot be statistically
 confident in it without further data and cannot give a confident
@@ -8419,23 +8443,24 @@ estimate in incremental revenue from the test.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [60]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">cat</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">table_to_use</span><span class="p">)</span>
-<span class="n">cat</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">glue</span><span class="p">(</span><span class="s2">"p1: "</span><span class="p">,</span><span class="s2">"</span><span class="si">{groups['p1']}</span><span class="s2"> Conversion Rate: {round(p1 * 100, 2)}%"</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">glue</span><span class="p">(</span><span class="s2">"p2: "</span><span class="p">,</span><span class="s2">"</span><span class="si">{groups['p2']}</span><span class="s2"> Conversion Rate: {round(p2 * 100, 2)}%"</span><span class="p">))</span>
-<span class="n">cat</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
-<span class="n">cat</span><span class="p">(</span><span class="s2">"Result Hypothesis:"</span><span class="p">,</span><span class="n">result_hypothesis</span><span class="p">)</span>
-<span class="n">cat</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
-<span class="n">cat</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
-<span class="n">cat</span><span class="p">(</span><span class="n">sprintf</span><span class="p">(</span><span class="s2">"Absolute difference: </span><span class="si">%.3f</span><span class="s2"> (</span><span class="si">%.1f%%</span><span class="s2">)</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">abs_diff</span><span class="p">,</span> <span class="n">abs_diff</span> <span class="o">*</span> <span class="mi">100</span><span class="p">))</span>
-<span class="n">cat</span><span class="p">(</span><span class="n">sprintf</span><span class="p">(</span><span class="s2">"Cohen's h: </span><span class="si">%.3f</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">h</span><span class="p">))</span>
-<span class="n">cat</span><span class="p">(</span><span class="n">sprintf</span><span class="p">(</span><span class="s2">"Effect size interpretation: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">interpret_h</span><span class="p">(</span><span class="n">h</span><span class="p">)))</span>
-<span class="n">cat</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<div class="highlight hl-R"><pre><span></span><span class="nf">cat</span><span class="p">(</span><span class="s">"\n"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">table_to_use</span><span class="p">)</span>
+<span class="nf">cat</span><span class="p">(</span><span class="s">"\n"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">glue</span><span class="p">(</span><span class="s">"p1: "</span><span class="p">,</span><span class="s">"{groups['p1']} Conversion Rate: {round(p1 * 100, 2)}%"</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">glue</span><span class="p">(</span><span class="s">"p2: "</span><span class="p">,</span><span class="s">"{groups['p2']} Conversion Rate: {round(p2 * 100, 2)}%"</span><span class="p">))</span>
+<span class="nf">cat</span><span class="p">(</span><span class="s">"\n"</span><span class="p">)</span>
+<span class="nf">cat</span><span class="p">(</span><span class="s">"Result Hypothesis:"</span><span class="p">,</span><span class="n">result_hypothesis</span><span class="p">)</span>
+<span class="nf">cat</span><span class="p">(</span><span class="s">"\n"</span><span class="p">)</span>
+<span class="nf">cat</span><span class="p">(</span><span class="s">"\n"</span><span class="p">)</span>
+<span class="nf">cat</span><span class="p">(</span><span class="nf">sprintf</span><span class="p">(</span><span class="s">"Absolute difference: %.3f (%.1f%%)\n"</span><span class="p">,</span><span class="w"> </span><span class="n">abs_diff</span><span class="p">,</span><span class="w"> </span><span class="n">abs_diff</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">100</span><span class="p">))</span>
+<span class="nf">cat</span><span class="p">(</span><span class="nf">sprintf</span><span class="p">(</span><span class="s">"Cohen's h: %.3f\n"</span><span class="p">,</span><span class="w"> </span><span class="n">h</span><span class="p">))</span>
+<span class="nf">cat</span><span class="p">(</span><span class="nf">sprintf</span><span class="p">(</span><span class="s">"Effect size interpretation: %s\n"</span><span class="p">,</span><span class="w"> </span><span class="nf">interpret_h</span><span class="p">(</span><span class="n">h</span><span class="p">)))</span>
+<span class="nf">cat</span><span class="p">(</span><span class="s">"\n"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">paste</span><span class="p">(</span><span class="s">"Result Power:"</span><span class="p">,</span><span class="nf">round</span><span class="p">(</span><span class="n">result_power</span><span class="o">*</span><span class="m">100</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="s">"%"</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -8474,6 +8499,7 @@ sample estimates:
 odds ratio 
   2.956901 
 
+[1] "Result Power: 75.3 %"
 </pre>
 </div>
 </div>
@@ -8497,12 +8523,12 @@ odds ratio
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>With 95% confidence, the treatment group (p₂) has higher odds of conversion than the control group (p₁).
+<p>With 95% confidence, the treatment group has higher odds of conversion than the control group.
 The odds of conversion in the treatment group are at least 29.5% higher than in the control group.
 This supports the hypothesis that treatment is better than control.</p>
-<p>Because the interval does not include 1, this result is statistically significant at the 95% confidence level.</p>
+<p>Because the interval does not include 1, and the p-value (0.012) is less than alpha (0.050), this result is statistically significant at the 95% confidence level.</p>
 <p>Result Power: 75.3 %</p>
-<p>Our test was somewhat underpowered (e.g., only ~75.3% power vs. 80%), meaning there was
+<p>Our test was somewhat underpowered (e.g., only ~75% power vs. 80% desired), meaning there was
 a higher chance we failed to detect a true difference due to limited sample size.
 As a result, while the effect appears meaningful, we cannot be statistically
 confident in it without further data and cannot give a confident
@@ -8530,7 +8556,7 @@ estimate in incremental revenue from the test.</p>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <ul>
 <li>It was established from the test that the treatment performed better with significance (at alpha=0.05). The practical significance is low (cohen's h = 0.02). It did not have the full desired statistical power (75% vs. 80%)</li>
-<li>In this case, given the constraints in needing to choose a landing page prematurely, I am comfortable enough with the treatment performing some level higher than the control with significance and not vice versa that I will recommend moving forward with implementing the treatment</li>
+<li>In this case, given the constraints in needing to choose a landing page prematurely, I am comfortable enough with the treatment performing some level higher than the control with significance and not vice versa that I recommend moving forward with implementing the treatment</li>
 </ul>
 </div>
 </div>
