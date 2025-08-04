@@ -11,5 +11,9 @@ Build an NLP model to accurately classify restaurant types from restaurant data.
 - IPython notebook (includes Google Colab link)  
 - Results report images (accuracy & classification)
 
+## Tech Setup
+- Python in Google Colab
+- Nvidia A100 GPU
+
 🖥️ Website: www.lindsaymsba.com
 
