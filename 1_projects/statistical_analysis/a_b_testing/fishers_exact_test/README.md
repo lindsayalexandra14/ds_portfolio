@@ -7,7 +7,10 @@ Perform Fisher's Exact Test on A/B Testing landing page data with small sample s
 
 ## Contents
 - Library requirements (used)   
-- IPython notebook (on R kernel, includes Google Colab link)  
+- IPython notebook (on R kernel, includes Google Colab link)
+
+## Tech Setup
+- R in Google Colab
 
 🖥️ Website: www.lindsaymsba.com
 
