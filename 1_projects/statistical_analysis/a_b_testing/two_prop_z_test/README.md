@@ -1,9 +1,9 @@
-# fishers_exact_test_r
+# two_prop_z_test_r
 
 **Author:** Lindsay McFarlane
 
 ## Purpose
-Perform Fisher's Exact Test on A/B Testing landing page data with small sample size to determine recommendation from test
+Perform Two Proportion z-Test on A/B Testing landing page data with large sample size to determine recommendation from test
 
 ## Contents
 - Library requirements (used)   
