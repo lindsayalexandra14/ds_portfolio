@@ -1,4 +1,4 @@
-# fishers_exact_test_r
+# small_sample
 
 **Author:** Lindsay McFarlane
 

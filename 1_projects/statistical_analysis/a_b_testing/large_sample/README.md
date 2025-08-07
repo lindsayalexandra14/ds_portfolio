@@ -1,4 +1,4 @@
-# two_prop_z_test_r
+# large_sample
 
 **Author:** Lindsay McFarlane
 
