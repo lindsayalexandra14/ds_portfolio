@@ -1,0 +1,10 @@
+broom==1.0.10
+car==3.1-3
+dplyr==1.1.4
+ggplot2==4.0.0
+ggthemes==5.1.0
+lpdensity==2.5
+rddensity==2.6
+rdrobust==3.0.0
+stargazer==5.2.3
+showtext==0.9.7
