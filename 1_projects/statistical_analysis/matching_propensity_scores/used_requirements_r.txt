@@ -1,0 +1,8 @@
+ggplot2==4.0.0
+Matching==4.10-15
+MatchIt==4.7.2
+optmatch==0.10.8
+showtext==0.9-7
+sysfonts==0.8.9
+tableone==0.13.2
+dplyr==1.1.4
