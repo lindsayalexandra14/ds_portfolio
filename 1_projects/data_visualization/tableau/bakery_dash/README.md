@@ -12,7 +12,7 @@ Build a Tableau dashboard of "The Bread Basket" Edinburgh bakery sales data for 
 ## Tech Setup
 - CSV & XLSX in Tableau 
 - Published on Tableau Public:
-https://public.tableau.com/app/profile/lindsay.mcfarlane/viz/bakerysalesdashboard_17622915059940/BakerySalesDash
+https://public.tableau.com/app/profile/lindsay.mcfarlane/viz/bakerysalesdashfinal/BakerySalesDash
 
 
 🖥️ Website: www.lindsaymsba.com
