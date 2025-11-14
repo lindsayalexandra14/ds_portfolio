@@ -121,11 +121,11 @@ st.markdown("""
 }
 
 .transparent_caption {
-    padding: 2px 2px;   
-    font-size: 0.9rem;
+    padding: 0px 0px;   
+    font-size: 0.5rem;
     font-style: italic;
     text-align: center;
-    margin-top: 6px;
+    margin-top: 1px;
 }
 
 /* large header-style caption */
