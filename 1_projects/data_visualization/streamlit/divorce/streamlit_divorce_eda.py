@@ -122,9 +122,8 @@ st.markdown("""
 
 .transparent_caption {
     padding: 8px 12px;   
-    border: 1px solid #aaa; 
-    border-radius: 12px; 
     font-size: 0.9rem;
+    font-weight: 600;
     margin-top: 6px;
 }
 
@@ -151,7 +150,7 @@ def headers(text):
     st.markdown(f"<div class='headers'>{text}</div>", unsafe_allow_html=True)
 
 def transparent_caption(text):
-    st.markdown('<div class="transparent_caption">Transparent caption</div>', unsafe_allow_html=True)
+    st.markdown(f"<div class='transparent_caption'>{text}</div>", unsafe_allow_html=True)
 
 def plot_bars(df, col, custom_palette, sort_by='percentage', title="Title TBD", caption='Caption TBD'):
     import pandas as pd
