@@ -79,7 +79,7 @@ df["marriage_yr"]=df["marriage_date"].dt.year
 df["divorce_year"]=df["divorce_date"].dt.year
 df["marriage_decade"]=df["marriage_date"].dt.year // 10 * 10
 
-columns_to_clean = ['age_difference', 'income_man', 'income_woman']
+columns_to_clean = ['age_diff', 'inc_man', 'inc_woman']
 
 for col in columns_to_clean:
     Q1 = df[col].quantile(0.25)
