@@ -136,32 +136,11 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-
-
 def tight_caption(text):
     st.markdown(f"<div class='tight_caption'>{text}</div>", unsafe_allow_html=True)
 
 def headers(text):
     st.markdown(f"<div class='headers'>{text}</div>", unsafe_allow_html=True)
-
-# def st_caption(text):
-#     st.markdown(
-#         f"""
-#         <div style="
-#             background-color: rgba(211, 211, 211, 0.5);
-#             padding: 12px 18px;
-#             border-radius: 12px;
-#             border: 1px solid gray;
-#             font-size: 14px;
-#             line-height: 1.4;
-#             margin: 14px 0px 22px 0px;
-#         ">
-#             {text}
-#         </div>
-#         """,
-#         unsafe_allow_html=True
-#     )
-
 
 def plot_bars(df, col, custom_palette, sort_by='percentage', title="Title TBD", caption='Caption TBD'):
     import pandas as pd
@@ -180,7 +159,7 @@ def plot_bars(df, col, custom_palette, sort_by='percentage', title="Title TBD", 
         raise ValueError("sort_by must be 'category' or 'percentage'")
 
     plot_df = pd.DataFrame({
-        "category": percentages.index.astype(str),  # ensure string type
+        "category": percentages.index.astype(str),  
         "percentage": percentages.values
     })
 
@@ -220,20 +199,6 @@ def plot_bars(df, col, custom_palette, sort_by='percentage', title="Title TBD", 
                       "Percentage: %{y:.1f}%"
     )
 
-#     fig.add_annotation(
-#     # text=caption,
-#     xref="paper", yref="paper",
-#     x=0, y=-0.22,
-#     showarrow=False,
-#     font=dict(size=14, color="black"),
-#     xanchor='left', yanchor='top',
-#     align="left",
-#     bgcolor="rgba(211, 211, 211, 0.5)",
-#     bordercolor="gray",
-#     borderpad=6,
-#     borderwidth=1
-# )
-
     return fig;
 
 def plot_histogram(df, x, nbins, xaxis_title):
@@ -256,23 +221,6 @@ def plot_histogram(df, x, nbins, xaxis_title):
 
     fig.update_xaxes(automargin=True)
 
-    # fig.add_annotation(
-    #     text=text,
-    #     xref="paper",
-    #     yref="paper",
-    #     x=0,
-    #     y=-0.24,
-    #     showarrow=False,
-    #     font=dict(size=14, color="black"),
-    #     xanchor='left',
-    #     yanchor='top',
-    #     align="left",
-    #     bgcolor="rgba(211, 211, 211, 0.5)",
-    #     bordercolor="gray",
-    #     borderpad=6,
-    #     borderwidth=1
-    # )  
-
     return fig
 
 
@@ -283,31 +231,16 @@ pairplot_columns = ['num_kids', 'marriage_dur','inc_man','inc_woman',
 def make_pairplot(
     df,
     pairplot_columns
-    # fig_title="Scatterplots (pairplot)"
+    
 ):
-    # Default annotations
-    # if annotation1 is None:
-    #     annotation1 = (
-    #         "There is a strong negative correlation between marriage year & marriage duration;"
-    #         "<br>the more recently the couples were married, the shorter the "
-    #         "marriage duration."
-    #     )
-    # if annotation2 is None:
-    #     annotation2 = (
-    #         "There is a strong positive correlation between the income of the man and the income "
-    #         "<br>of the woman; if the income of the man is high or low, so is that of the woman"
-    #     )
 
-    # Create scatter matrix
     fig = px.scatter_matrix(
         df,
-        dimensions=pairplot_columns,  # <- must match df_temp columns
-        # title=fig_title,
+        dimensions=pairplot_columns,
         height=900,
         width=1200
     )
 
-    # Update traces
     fig.update_traces(
         diagonal_visible=False,
         marker=dict(size=5, opacity=0.7, color='cornflowerblue')
@@ -315,35 +248,6 @@ def make_pairplot(
 
     # Layout & margin
     fig.update_layout(margin=dict(t=40, b=10, l=10, r=10))
-
-    # # Add annotations
-    # fig.add_annotation(
-    #     text=annotation1,
-    #     xref="paper", yref="paper",
-    #     x=0, y=-0.11,
-    #     showarrow=False,
-    #     font=dict(size=17, color="black"),
-    #     xanchor='left', yanchor='top',
-    #     align="left",
-    #     bgcolor="rgba(211, 211, 211, 0.5)",
-    #     bordercolor="gray",
-    #     borderpad=6,
-    #     borderwidth=1
-    # )
-
-    # fig.add_annotation(
-    #     text=annotation2,
-    #     xref="paper", yref="paper",
-    #     x=0, y=-0.20,
-    #     showarrow=False,
-    #     font=dict(size=17, color="black"),
-    #     xanchor='left', yanchor='top',
-    #     align="left",
-    #     bgcolor="rgba(211, 211, 211, 0.5)",
-    #     bordercolor="gray",
-    #     borderpad=6,
-    #     borderwidth=1
-    # )
 
     return fig
 
@@ -364,38 +268,12 @@ def make_correlation_heatmap(
     heatmap_palette="coolwarm",
     figsize=(7, 5)
 ):
-    # # Default caption
-    # if caption_text is None:
-    #     caption_text = (
-    #         "The heatmap shows the correlations between all the numerical variables:\n"
-    #         "\n"
-    #         "Strong positive correlations:\n"
-    #         "• Income (Man) & Income (Woman)\n"
-    #         "• Number of Kids & Marriage Duration\n"
-    #         "• Age Difference & Years Woman Older\n\n"
-    #         "Strong negative correlations:\n"
-    #         "• Marriage Duration & Marriage Year\n"
-    #         "• Number of Kids & Marriage Year and Decade\n"
-    #         "• Age Difference & Years Man Older"
-    #     )
-
-    # Create figure
+ 
     fig = plt.figure(figsize=figsize)
 
-        # Make background transparent
+    # Make background transparent
     fig.patch.set_alpha(0)
 
-#     plt.figtext(
-#     0.5,      # centered horizontally
-#     0.97,     # slightly above the plot
-#     "Correlation Heatmap",
-#     ha="center",
-#     va="center",
-#     fontsize=10,          # small but bold like Plotly
-#     fontweight="bold",
-# )
-
-    # Draw heatmap
     sns.heatmap(
         df.corr(numeric_only=True),
         annot=True,
@@ -409,22 +287,9 @@ def make_correlation_heatmap(
 
     )
 
-    # Formatting
     plt.xticks(rotation=45, ha='right')
     plt.yticks(rotation=0)
-    plt.tight_layout(rect=[0, 0, 1, 0.95])  # leave space for your custom title
-
-        # Caption
-    # plt.figtext(
-    #     0.52, -0.35,          # x = 0.5 centers horizontally
-    #     caption_text,
-    #     fontsize=10,
-    #     color='black',
-    #     wrap=True,
-    #     horizontalalignment='center',
-    #     bbox=dict(facecolor='lightgray', alpha=0.5,
-    #             edgecolor='gray')
-    # )
+    plt.tight_layout(rect=[0, 0, 1, 0.95])  
 
     return fig
 
@@ -457,15 +322,6 @@ chi_squared_df = pd.DataFrame(results).sort_values('p_value').reset_index(drop=T
 def make_chi2_plot(
     chi_squared_df
 ):
-    # # Default caption text
-    # if caption_text is None:
-    #     caption_text = (
-    #         "Chi-Squared test pairs the categorical variables to see if a significant relationship exists:\n"
-    #         "(Note, number of kids has been used as numerical & categorical given its few unique values)\n"
-    #         "\n"
-    #         "• Highest signficance in relationship between Income (Man) & Income (Woman)\n"
-    #         "• All other relationships significant except for Education (Man) & Number of Kids"
-    #     )
 
     # Create label pair column
     chi_squared_df = chi_squared_df.copy()
@@ -474,16 +330,6 @@ def make_chi2_plot(
     # Dynamic figure size
     fig = plt.figure(figsize=(8, max(4, 0.3 * len(chi_squared_df))))
 
-
-#     plt.figtext(
-#     0.5,      # centered horizontally
-#     0.97,     # slightly above the plot
-#     "Chi-squared Tests",
-#     ha="center",
-#     va="center",
-#     fontsize=10,          # small but bold like Plotly
-#     fontweight="bold",
-# )
     # Custom color palette
     unique_hues = chi_squared_df['chi2_stat'].nunique()
     palette = custom_palette[:unique_hues]
@@ -500,7 +346,7 @@ def make_chi2_plot(
 
     fig.patch.set_alpha(0)
     ax.set_facecolor("none")
-    # Annotate bars
+  
     max_chi2 = chi_squared_df['chi2_stat'].max()
 
     for i, row in chi_squared_df.iterrows():
@@ -535,38 +381,12 @@ def make_chi2_plot(
     # Expand x-axis
     ax.set_xlim(0, max_chi2 * 1.5)
 
-    # # Caption
-    # plt.figtext(
-    #     0.52, -0.25,          # x = 0.5 centers horizontally
-    #     caption_text,
-    #     fontsize=10,
-    #     color='black',
-    #     wrap=True,
-    #     horizontalalignment='center',
-    #     bbox=dict(facecolor='lightgray', alpha=0.5,
-    #             edgecolor='gray')
-    # )
-
-    # Final touches
     plt.xlabel('Chi-2 Statistic')
     plt.ylabel('')
-    plt.tight_layout(rect=[0, 0, 1, 0.95])  # leave space for your custom title
+    plt.tight_layout(rect=[0, 0, 1, 0.95])  
     plt.legend().remove()
 
     return fig
-
-# fig1 = plot_bars(df, "num_kids", custom_palette, title="Number of Kids", caption="Most of the (divorced) couples had 0 kids (39%) followed by<br>having 1 or 2 kids.")
-# fig2 = plot_bars(df,"education_man", custom_palette, title='Education (Man)', caption="Most of the men had a Professional-level education (higher <br>education, post-college) at 57%.")
-# fig3 = plot_bars(df,"education_woman", custom_palette, title='Education (Woman)', caption="The women had an even higher makeup of Professional-level education<br>(higher education, post-college) at 62%.")
-# fig4 = plot_bars(df,"marriage_decade", custom_palette, title='Marriage Decade', caption="Over 75% of the couples were married in the '90s or '00s.")
-# fig5 = plot_bars(df,"marriage_yr", custom_palette, title='Marriage Year', sort_by="category", caption="The highest percentage of couples were married in 1998 (5.5%).")
-# fig6 = plot_bars(df,"divorce_year", custom_palette, sort_by="category", title='Divorce Year', caption='The highest number of divorces among the couples occurred in <br>2011 (9.8%), with an overall peak between 2008-2011.')
-
-# fig7 = plot_histogram(df,"marriage_dur",20,"Marriage Duration",text="The median marriage duration is 8 years. The heaviest<br>concentration is between 2-5 years and the max is 33 years.")
-# fig8 = plot_histogram(df,"inc_man",15,"Income (Man)",text="The median monthly income for the men was 5,000 dollars <br>with an IQR of 3,200-8,200 dollars and a max of ~19k.")
-# fig9 = plot_histogram(df,"inc_woman",15,"Income (Woman)",text="The median monthly income for the women was also 5,000 dollars <br>with a bit lower Q3 (7,500 dollars) and max (~15k).")
-# fig10 = plot_histogram(df,"age_diff",10,"Age Difference",text="The median age difference of the couple was 2 years, with<br>most ranging from 1-4 years")
-# fig11 = plot_histogram(df,"years_woman_older",20,"Years Woman Older",text="The median number of years older of the woman was 1,<br> showing that in most divorced couples the woman was older.")
 
 fig1 = plot_bars(df, "num_kids", custom_palette, title="Number of Kids")
 fig2 = plot_bars(df,"education_man", custom_palette, title='Education (Man)')
@@ -611,10 +431,6 @@ tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(
     ["Num Kids", "Education Man", "Education Woman", "Marriage Decade", "Marriage Year", "Divorce Year"]
 )
 
-# for tab, fig in zip([tab1, tab2, tab3, tab4, tab5, tab6], [fig1, fig2, fig3, fig4, fig5, fig6]):
-#     with tab:
-#         st.plotly_chart(fig, use_container_width=True)
-
 for tab, fig, caption in zip(
     [tab1, tab2, tab3, tab4, tab5, tab6],
     [fig1, fig2, fig3, fig4, fig5, fig6],
@@ -623,7 +439,7 @@ for tab, fig, caption in zip(
     with tab:
         st.plotly_chart(fig, use_container_width=True)
         tight_caption(caption)
-st.markdown("<br>", unsafe_allow_html=True)  # two blank lines
+st.markdown("<br>", unsafe_allow_html=True)  
 
 headers("Histograms")
 
@@ -641,10 +457,6 @@ for tab, fig, caption in zip(
         st.plotly_chart(fig, use_container_width=True)
         tight_caption(caption)
 
-# for tab, fig in zip([tab7, tab8, tab9, tab10, tab11], [fig7, fig8, fig9, fig10, fig11]):
-#     with tab:
-#         st.plotly_chart(fig, use_container_width=True)
-
 pairplot_caption1 = (
             "There is a strong negative correlation between marriage year & marriage duration;"
             "<br>the more recently the couples were married, the shorter the "
@@ -661,7 +473,7 @@ corrplot_caption = (
     "• Number of Kids & Marriage Duration<br>"
     "• Age Difference & Years Woman Older<br><br>"
     "Strong negative correlations:<br>"
-    "• Marriage Duration & Marriage Year<br>"
+    "• Marriage Duration & Marriage Year and Decade<br>"
     "• Number of Kids & Marriage Year and Decade<br>"
     "• Age Difference & Years Man Older"
 )
@@ -669,68 +481,30 @@ corrplot_caption = (
 chi_caption = (
             "Chi-Squared test pairs the categorical variables to see if a significant relationship exists:<br>"
             "(Note, number of kids has been used as numerical & categorical given its few unique values)<br><br>"
-            "• Highest signficance in relationship between Income (Man) & Income (Woman)<br>"
+            "• Highest signficance in relationship between Education (Man) & Education (Woman)<br>"
             "• All other relationships significant except for Education (Man) & Number of Kids"
         )
-# Remaining figures
-st.markdown("<br>", unsafe_allow_html=True)  # two blank lines
+
+st.markdown("<br>", unsafe_allow_html=True)  
 headers("Scatterplots")
 st.plotly_chart(fig12, use_container_width=True)
-tight_caption(pairplot_caption1)  # pairplot
+tight_caption(pairplot_caption1)  
 tight_caption(pairplot_caption2) 
-st.markdown("<br>", unsafe_allow_html=True)  # two blank lines
+st.markdown("<br>", unsafe_allow_html=True)  
 
 headers("Heatmap")
-st.pyplot(fig13)  # correlation heatmap
+st.pyplot(fig13)  
 tight_caption(corrplot_caption)
-st.markdown("<br>", unsafe_allow_html=True)  # two blank lines
+st.markdown("<br>", unsafe_allow_html=True) 
 
 headers("Chi-squared Tests")
-st.pyplot(fig14)  # chi2 plot
+st.pyplot(fig14) 
 tight_caption(chi_caption)
-st.markdown("<br>", unsafe_allow_html=True)  # two blank lines
+st.markdown("<br>", unsafe_allow_html=True)
 
 
 headers("Linear Regression")
 
-# # dummy variables for marriage decade (since it is now categorical)
-# df_encoded = pd.get_dummies(df, columns=['marriage_decade'], drop_first=True)
-
-# X_data = df[['age_diff','income_diff','num_kids','marriage_decade']].astype(float)
-
-# y_target = df['marriage_dur'].astype(float)
-
-# x_train, x_test, y_train, y_test = holdout(X_data, y_target, test_size=0.2, random_state=0)
-
-# regression = LinearRegression()
-# regression.fit(x_train, y_train)
-
-# predictions = regression.predict(x_test)
-
-# rmse = np.sqrt(mean_squared_error(y_test, predictions))
-
-# print(rmse)
-
-# x_train_const = sm.add_constant(x_train)
-# model = sm.OLS(y_train, x_train_const).fit()
-# print(model.summary())
-
-# vif_data = pd.DataFrame()
-# vif_data["feature"] = X_data.columns
-# vif_data["VIF"] = [variance_inflation_factor(X_data.values, i) for i in range(X_data.shape[1])]
-
-# print(vif_data)
-
-import streamlit as st
-import pandas as pd
-import numpy as np
-from sklearn.model_selection import train_test_split as holdout
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics import mean_squared_error
-import statsmodels.api as sm
-from statsmodels.stats.outliers_influence import variance_inflation_factor
-
-# --- Prepare data ---
 df_encoded = pd.get_dummies(df, columns=['marriage_decade'], drop_first=True)
 
 X_data = df[['age_diff','income_diff','num_kids','marriage_decade']].astype(float)
@@ -738,7 +512,6 @@ y_target = df['marriage_dur'].astype(float)
 
 x_train, x_test, y_train, y_test = holdout(X_data, y_target, test_size=0.2, random_state=0)
 
-# --- Linear Regression ---
 regression = LinearRegression()
 regression.fit(x_train, y_train)
 predictions = regression.predict(x_test)
