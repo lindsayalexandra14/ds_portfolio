@@ -121,9 +121,10 @@ st.markdown("""
 }
 
 .transparent_caption {
-    padding: 8px 12px;   
+    padding: 2px 8px;   
     font-size: 0.9rem;
-    font-weight: 600;
+    font-style: italic;
+    text-align: center;
     margin-top: 6px;
 }
 
