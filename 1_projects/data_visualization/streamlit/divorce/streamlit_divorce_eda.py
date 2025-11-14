@@ -17,7 +17,7 @@ import os
 
 st.markdown(
     """
-    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Dancing+Script:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
     <h1 style="
         text-align:center;
@@ -31,11 +31,11 @@ st.markdown(
 
     <h4 style="
         text-align:center;
-        font-family:'Abel';
+        font-family:'Georgia';
         font-size:22px;
         color:#999;
         margin-top:0px;
-        font-weight:400;
+        font-weight:300;
         font-style: italic;
     ">
         Exploratory Data Analysis
@@ -43,6 +43,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
 # Get the folder where this script lives
 BASE_DIR = os.path.dirname(__file__)
