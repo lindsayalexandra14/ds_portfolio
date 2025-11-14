@@ -13,8 +13,6 @@ import statsmodels.api as sm
 from statsmodels.stats.outliers_influence import variance_inflation_factor
 from statsmodels.tools.tools import add_constant
 import streamlit as st
-import os
-import pandas as pd
 
 st.markdown(
     """
@@ -45,14 +43,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Get the folder where this script lives
-BASE_DIR = os.path.dirname(__file__)
-
-# Build the full path to the CSV
-csv_path = os.path.join(BASE_DIR, "divorce.csv")
-
-# Read it
-df = pd.read_csv(csv_path)
+df = pd.read_csv("divorce.csv")
 
 df["num_kids"]=df["num_kids"].fillna(0)
 df["marriage_dur"]=df["marriage_duration"]
