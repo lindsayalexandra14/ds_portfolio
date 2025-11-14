@@ -420,7 +420,7 @@ fig13 = make_correlation_heatmap(df, heatmap_palette=heatmap_palette)
 fig14 = make_chi2_plot(chi_squared_df)
 
 headers("Bar Charts")
-transparent_caption("see tabs")
+transparent_caption("click tabs")
 
 captions_group1 = [
     "Most of the couples had 0 kids (39%) followed by 1–2 kids.",
