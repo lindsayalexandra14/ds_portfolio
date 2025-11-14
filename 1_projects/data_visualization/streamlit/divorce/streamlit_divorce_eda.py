@@ -110,7 +110,7 @@ custom_palette = [
 
 st.markdown("""
 <style>
-/* Existing small caption style */
+/* small caption style */
 .tight_caption {
     padding: 8px 12px;
     background: rgba(219, 212, 208, 0.6);   
@@ -120,7 +120,15 @@ st.markdown("""
     margin-top: 6px;
 }
 
-/* NEW large header-style caption */
+.transparent_caption {
+    padding: 8px 12px;   
+    border: 1px solid #aaa; 
+    border-radius: 12px; 
+    font-size: 0.9rem;
+    margin-top: 6px;
+}
+
+/* large header-style caption */
 .headers {
     background: #D6CCC7;
     padding: 12px 18px;
@@ -408,6 +416,7 @@ fig13 = make_correlation_heatmap(df, heatmap_palette=heatmap_palette)
 fig14 = make_chi2_plot(chi_squared_df)
 
 headers("Bar Charts")
+transparent_caption("see tabs")
 
 captions_group1 = [
     "Most of the couples had 0 kids (39%) followed by 1–2 kids.",
@@ -442,6 +451,7 @@ for tab, fig, caption in zip(
 st.markdown("<br>", unsafe_allow_html=True)  
 
 headers("Histograms")
+transparent_caption("see tabs")
 
 # Group 2: figs 7-11
 tab7, tab8, tab9, tab10, tab11 = st.tabs(
