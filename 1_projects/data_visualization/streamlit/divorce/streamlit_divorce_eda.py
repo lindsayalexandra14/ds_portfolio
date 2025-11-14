@@ -122,10 +122,11 @@ st.markdown("""
 
 .transparent_caption {
     padding: 0px 0px;   
-    font-size: 0.1rem;
+    font-size: 0.05rem;
     font-style: italic;
     text-align: center;
     margin-top: 0px;
+    color: #777; 
 }
 
 /* large header-style caption */
