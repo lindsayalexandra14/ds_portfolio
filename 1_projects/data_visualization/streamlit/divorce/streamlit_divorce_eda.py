@@ -150,6 +150,9 @@ def tight_caption(text):
 def headers(text):
     st.markdown(f"<div class='headers'>{text}</div>", unsafe_allow_html=True)
 
+def transparent_caption(text):
+    st.markdown('<div class="transparent_caption">Transparent caption</div>', unsafe_allow_html=True)
+
 def plot_bars(df, col, custom_palette, sort_by='percentage', title="Title TBD", caption='Caption TBD'):
     import pandas as pd
     import plotly.express as px
