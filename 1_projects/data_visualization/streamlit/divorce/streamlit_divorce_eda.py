@@ -455,7 +455,7 @@ for tab, fig, caption in zip(
 st.markdown("<br>", unsafe_allow_html=True)  
 
 headers("Histograms")
-transparent_caption("see tabs")
+transparent_caption("click tabs")
 
 # Group 2: figs 7-11
 tab7, tab8, tab9, tab10, tab11 = st.tabs(
