@@ -126,7 +126,7 @@ st.markdown("""
     font-style: italic;
     text-align: center;
     margin-top: 0px;
-    color: #888; 
+    color: #999; 
 }
 
 /* large header-style caption */
