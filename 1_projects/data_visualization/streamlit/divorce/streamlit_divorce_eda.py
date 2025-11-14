@@ -37,7 +37,7 @@ st.markdown(
         font-weight:300;
         font-style: italic;
     ">
-        Exploratory Data Analysis
+        Exploratory Data Analysis x Lindsay McFarlane
     </h4>
     """,
     unsafe_allow_html=True
