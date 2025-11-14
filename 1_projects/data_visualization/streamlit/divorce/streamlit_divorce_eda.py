@@ -17,7 +17,7 @@ import os
 
 st.markdown(
     """
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Dancing+Script:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
     <h1 style="
         text-align:center;
@@ -31,11 +31,11 @@ st.markdown(
 
     <h4 style="
         text-align:center;
-        font-family:'Inter';
+        font-family:'Abel';
         font-size:22px;
         color:#999;
         margin-top:0px;
-        font-weight:300;
+        font-weight:400;
         font-style: italic;
     ">
         Exploratory Data Analysis
