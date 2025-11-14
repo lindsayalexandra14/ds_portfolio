@@ -33,7 +33,7 @@ st.markdown(
         text-align:center;
         font-family:'Inter', sans-serif;
         font-size:22px;
-        color:#666;
+        color:#888;
         margin-top:0px;
         font-weight:300;
         font-style: italic;
