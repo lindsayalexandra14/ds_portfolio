@@ -425,7 +425,7 @@ with st.expander("Data Overview"):
     "The data is comprised of ~2K couples who divorced in Mexico from 2000-2015.<br>"
     "Each row of the data represents one divorced couple.<br><br>"
 
-    "VARIABLES (& DEFINITIONS)):<br>"
+    "VARIABLES (& DEFINITIONS):<br>"
     "divorce_date, marriage_date: exact dates of marriage/divorce<br>"
     "dob_man, dob_woman: exact dates of birth<br>"
     "marriage_duration: # of years married<br>"
