@@ -440,7 +440,7 @@ headers("Bar Charts")
 transparent_caption("click tabs")
 
 captions_group1 = [
-    "Most of the couples had 0 kids (39%) followed by 1–2 kids.",
+    "Most of the (divorced) couples had 0 kids (39%) followed by 1–2 kids.",
     "Most of the men had a Professional-level education (higher education: college+) at 57%.",
     "The women had an even higher makeup of Professional-level education (higher education: post-college) at 62%.",
     "Over 75% of couples were married in the '90s or '00s.",
