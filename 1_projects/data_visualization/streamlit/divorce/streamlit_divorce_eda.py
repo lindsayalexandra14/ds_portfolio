@@ -425,7 +425,7 @@ transparent_caption("Data Overview:<br><br>"
 
 "Variables:<br>"
 "divorce_date, marriage_date: exact dates of marriage/divorce<br>"
-"dob_man, dob_woman: exact dates of birth<br"
+"dob_man, dob_woman: exact dates of birth<br>"
 "marriage_duration: # of years married<br>"
 "num_kids: number of kids<br>"
 "income_man & income_woman: monthly income<br><br>"
@@ -449,7 +449,7 @@ captions_group1 = [
 ]
 
 captions_group2 = [
-    "Median marriage duration is 8 years; most fall within 2–5 years and the max is 32 years.",
+    "The median marriage duration is 8 years; most fall within 2–5 years and the max is 32 years.",
     "The median monthly income for the men is $5,000/mo with most earning $3,200–$8,200 (IQR) and a max of ~$19K.",
     "The median monthly income for the women is $5,000/mo with slightly lower upper range (Q3 of $7K) than the men, and a max of ~$15K.",
     "The median age difference is 2 years, with most falling between 1–4 years.",
@@ -512,10 +512,10 @@ corrplot_caption = (
 chi_caption = (
             "Chi-Squared test pairs the categorical variables to see if a significant relationship exists:<br>"
             "(Note, number of kids has been used as numerical & categorical given its few unique values)<br><br>"
-                "• Education (Man) & Education (Woman) have most signficant relationship<br>"
+                "• Education (Man) & Education (Woman) have the most significant relationship<br>"
                 "• Number of Kids & Marriage Decade have a significant relationship<br>"
                 "• Education (Woman) and & Number of Kids have a significant relationship<br>"
-                "• Education (Man) & Number of Kids DO NOT have a significant relationship",
+                "• Education (Man) & Number of Kids DO NOT have a significant relationship"
         )
 
 st.markdown("<br>", unsafe_allow_html=True)  
