@@ -419,7 +419,8 @@ fig13 = make_correlation_heatmap(df, heatmap_palette=heatmap_palette)
 
 fig14 = make_chi2_plot(chi_squared_df)
 
-transparent_caption("Data Overview:<br><br>"
+with st.expander("Data Overview"):
+    st.write('''
 "The data is comprised of ~2K couples who divorced in Mexico from 2000-2015<br>"
 "Each row of the data represents one divorced couple<br><br>"
 
@@ -435,6 +436,7 @@ transparent_caption("Data Overview:<br><br>"
 "Secondary : high school<br>"
 "Primary : elementary school<br>"
 "Other : education not covered by the above)<br>")
+''')
 
 headers("Bar Charts")
 transparent_caption("click tabs")
