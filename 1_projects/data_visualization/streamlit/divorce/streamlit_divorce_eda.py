@@ -419,7 +419,7 @@ fig13 = make_correlation_heatmap(df, heatmap_palette=heatmap_palette)
 
 fig14 = make_chi2_plot(chi_squared_df)
 
-with st.expander("Data Overview (click to show)"):
+with st.expander("Data Overview (click)"):
     
     transparent_caption("What is the data?<br>"
     "The data is comprised of ~2K couples who divorced in Mexico from 2000-2015.<br>"
