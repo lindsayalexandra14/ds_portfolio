@@ -1,16 +1,19 @@
-# Divorce Data EDA
+# Streamlit Divorce Data EDA App
 
 **Author:** Lindsay McFarlane
 
 ## Purpose
-Perform an Exploratory Data Analysis (EDA) on the "Divorce" dataset for data visualization purposes
+Show the Exploratory Data Analysis (EDA) on the "Divorce" dataset visualized in a cleaner, more interactive format with Streamlit
 
 ## Contents 
 - Dataset "divorce.csv"
-- ipynb notebook
+- Streamlit .py file
+- requirements.txt
+- .streamlit folder with config.toml file
 
 ## Tech Setup
-- Python kernel in Google Colab notebook
+- Python in .py file that runs Streamlit app on the Community
+Cloud here: https://dsportfolio-divorce-eda.streamlit.app/
 
 
 🖥️ Website: www.lindsaymsba.com
