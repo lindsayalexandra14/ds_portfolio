@@ -421,11 +421,11 @@ fig14 = make_chi2_plot(chi_squared_df)
 
 with st.expander("Data Overview"):
     
-    transparent_caption("What is the data?:<br>"
+    transparent_caption("What is the data?<br>"
     "The data is comprised of ~2K couples who divorced in Mexico from 2000-2015.<br>"
     "Each row of the data represents one divorced couple.<br><br>"
 
-    "What are the variables (& definitions)?:<br>"
+    "What are the variables (& definitions)?<br>"
     "divorce_date, marriage_date: exact dates of marriage/divorce<br>"
     "dob_man, dob_woman: exact dates of birth<br>"
     "marriage_duration: # of years married<br>"
