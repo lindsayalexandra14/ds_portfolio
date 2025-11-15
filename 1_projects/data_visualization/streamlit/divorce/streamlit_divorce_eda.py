@@ -419,24 +419,41 @@ fig13 = make_correlation_heatmap(df, heatmap_palette=heatmap_palette)
 
 fig14 = make_chi2_plot(chi_squared_df)
 
+transparent_caption("Data Overview:<br><br>"
+"The data is comprised of ~2K couple who divorced in Mexico from 2000-2015<br>"
+"Each row of the data represents one divorced couple<br><br>"
+
+"Variables:<br>"
+"divorce_date, marriage_date: exact dates of marriage/divorce<br>"
+"dob_man, dob_woman: exact dates of birth<br"
+"marriage_duration: # of years married<br>"
+"num_kids: number of kids<br>"
+"income_man & income_woman: monthly income<br><br>"
+"education_man & education_woman:<br>"
+"Professional : higher education (college+)<br>"
+"Preparatory : pre-university schooling (prep school, pre-university diploma)<br>"
+"Secondary : high school<br>"
+"Primary : elementary school<br>"
+"Other : education not covered by the above)<br>")
+
 headers("Bar Charts")
 transparent_caption("click tabs")
 
 captions_group1 = [
     "Most of the couples had 0 kids (39%) followed by 1–2 kids.",
-    "Most of the men had a Professional-level education (57%).",
-    "Most women also had Professional-level education (62%).",
+    "Most of the men had a Professional-level education (higher education: college+) at 57%.",
+    "The women had an even higher makeup of Professional-level education (higher education: post-college) at 62%.",
     "Over 75% of couples were married in the '90s or '00s.",
     "Highest marriage count occurred in 1998 (5.5%).",
-    "Most divorces occurred between 2008–2011, peak in 2011 (9.8%)."
+    "Most divorces occurred between 2008–2011, with a peak in 2011 (9.8%)."
 ]
 
 captions_group2 = [
-    "Median marriage duration is 8 years; most fall within 2–5 years.",
-    "Median income (man): $5,000/mo (IQR $3,200–$8,200).",
-    "Median income (woman): $5,000/mo with slightly lower upper range.",
-    "Median age difference is 2 years; most fall between 1–4 years.",
-    "Median years woman older = 1; often the woman is slightly older."
+    "Median marriage duration is 8 years; most fall within 2–5 years and the max is 32 years.",
+    "The median monthly income for the men is $5,000/mo with most earning $3,200–$8,200 (IQR) and a max of ~$19K.",
+    "The median monthly income for the women is $5,000/mo with slightly lower upper range (Q3 of $7K) than the men, and a max of ~$15K.",
+    "The median age difference is 2 years, with most falling between 1–4 years.",
+    "The median years the woman older is 1, showing that in most of the divorced couples the woman is slightly older."
 ]
 
 
@@ -495,8 +512,10 @@ corrplot_caption = (
 chi_caption = (
             "Chi-Squared test pairs the categorical variables to see if a significant relationship exists:<br>"
             "(Note, number of kids has been used as numerical & categorical given its few unique values)<br><br>"
-            "• Highest signficance in relationship between Education (Man) & Education (Woman)<br>"
-            "• All other relationships significant except for Education (Man) & Number of Kids"
+                "• Education (Man) & Education (Woman) have most signficant relationship<br>"
+                "• Number of Kids & Marriage Decade have a significant relationship<br>"
+                "• Education (Woman) and & Number of Kids have a significant relationship<br>"
+                "• Education (Man) & Number of Kids DO NOT have a significant relationship",
         )
 
 st.markdown("<br>", unsafe_allow_html=True)  
