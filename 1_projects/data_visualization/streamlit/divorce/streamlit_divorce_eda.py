@@ -420,7 +420,7 @@ fig13 = make_correlation_heatmap(df, heatmap_palette=heatmap_palette)
 fig14 = make_chi2_plot(chi_squared_df)
 
 transparent_caption("Data Overview:<br><br>"
-"The data is comprised of ~2K couple who divorced in Mexico from 2000-2015<br>"
+"The data is comprised of ~2K couples who divorced in Mexico from 2000-2015<br>"
 "Each row of the data represents one divorced couple<br><br>"
 
 "Variables:<br>"
