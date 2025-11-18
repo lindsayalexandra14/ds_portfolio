@@ -3,7 +3,7 @@
 **Author:** Lindsay McFarlane
 
 ## Purpose
-Apply propensity score matching to data from labor training randomized experiment to measure causal effect of the program on income through observational methods.
+Apply propensity score matching to data on the impact of remote work to measure causal effect of remote work on work life balance through observational methods.
 
 ## Contents
 - Library requirements (used)   
