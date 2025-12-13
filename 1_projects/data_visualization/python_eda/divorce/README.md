@@ -10,7 +10,7 @@ Perform an Exploratory Data Analysis (EDA) on the "Divorce" dataset for data vis
 - ipynb notebook
 
 ## Tech Setup
-- Python kernel in Google Colab notebook
+- Python kernel in Google Colab notebook (3.12.12)
 
 
 🖥️ Website: www.lindsaymsba.com
