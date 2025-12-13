@@ -10,7 +10,7 @@ Perform Bayesian A/B Testing on scooter ads data determine recommendation from t
 - IPython notebook (on Python 3 kernel, includes Google Colab link)
 
 ## Tech Setup
-- Python in Google Colab
+- Python in Google Colab (3.12.11)
 
 🖥️ Website: www.lindsaymsba.com
 

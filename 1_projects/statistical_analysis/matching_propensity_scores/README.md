@@ -10,7 +10,7 @@ Apply propensity score matching to data on the impact of remote work to measure 
 - IPython notebook (on R kernel, includes Google Colab link)
 
 ## Tech Setup
-- R in Google Colab
+- R in Google Colab (4.5.2)
 
 🖥️ Website: www.lindsaymsba.com
 
