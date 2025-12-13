@@ -11,7 +11,7 @@ Identify the factors that are most impactful to employee time-to-churn to determ
 - IPython notebook (on Python 3 kernel, includes Google Colab link)
 
 ## Tech Setup
-- Python in Google Colab
+- Python in Google Colab (Python 3.12.12)
 
 🖥️ Website: www.lindsaymsba.com
 
