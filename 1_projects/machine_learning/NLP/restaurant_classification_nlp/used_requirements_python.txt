@@ -7,3 +7,5 @@ sklearn-pandas==2.2.0
 torch @ https://download.pytorch.org/whl/cu124/torch-2.6.0%2Bcu124-cp311-cp311-linux_x86_64.whl
 transformers==4.53.2
 plotly==5.24.1
+scikit-learn>=1.0,<2.0
+scipy>=1.7
