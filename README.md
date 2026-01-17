@@ -6,6 +6,9 @@ I'm a data scientist passionate about delivering meaningful, accurate, & simplif
 
 🔧 Languages: Python, R, SQL  
 🌴 Location: California, USA  
-🖥️ Website: www.lindsaymsba.com  
+🖥️ Website: www.lindsaymsba.com
+
+© 2026 Lindsay McFarlane. Please do not reproduce without permission.
+
 
 
