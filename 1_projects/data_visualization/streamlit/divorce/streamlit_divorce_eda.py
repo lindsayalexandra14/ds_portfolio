@@ -81,6 +81,8 @@ df["marriage_decade"]=df["marriage_date"].dt.year // 10 * 10
 
 columns_to_clean = ['age_diff', 'inc_man', 'inc_woman']
 
+outlier_flags = pd.DataFrame(False, index=df.index, columns=columns_to_clean)
+
 for col in columns_to_clean:
     Q1 = df[col].quantile(0.25)
     Q3 = df[col].quantile(0.75)
@@ -89,7 +91,10 @@ for col in columns_to_clean:
     lower_bound = Q1 - 1.5 * IQR
     upper_bound = Q3 + 1.5 * IQR
 
-    df = df[(df[col] >= lower_bound) & (df[col] <= upper_bound)]
+    outlier_flags[col] = (df[col] < lower_bound) | (df[col] > upper_bound)
+
+rows_to_remove = outlier_flags.any(axis=1)
+df = df[~rows_to_remove]
 
 custom_palette = [
     '#dfbefb',
